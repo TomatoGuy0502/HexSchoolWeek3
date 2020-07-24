@@ -49,6 +49,7 @@ html {
 img {
   display: block;
   max-width: 100%;
+  // height: auto;
 }
 a {
   text-decoration: none;
@@ -67,6 +68,12 @@ button {
   &__hamburger {
     display: none;
     padding: 10px;
+    transition: all .3s;
+    border-radius: 30px;
+    cursor: pointer;
+    &:hover {
+      background: #EAF0ED;
+    }
   }
   &__brand--mobile {
     display: none;
@@ -79,10 +86,20 @@ button {
     a {
       padding: 10px 30px;
       color: #3f5d45;
+      border-radius: 30px;
+      transition: all .3s;
+      &:hover {
+        background: #EAF0ED;
+      }
     }
   }
   &__cart {
     padding: 10px;
+    border-radius: 30px;
+    transition: all .3s;
+    &:hover {
+      background: #EAF0ED;
+    }
   }
 }
 
@@ -100,7 +117,7 @@ button {
 .store {
   display: flex;
   &__menu {
-    flex: 1;
+    flex: 1 0 33%;
     margin-right: 20px;
     font-weight: 700;
     h3 {
@@ -110,18 +127,24 @@ button {
       padding: 16px 0;
     }
     li {
-      text-align: center;
-      padding: 16px 0;
-      color: #3f5d45;
       border: 1px solid #eaf0ed;
-      cursor: pointer;
+      transition: all .3s;
       &.active {
         background-color: #EAF0ED;
+      }
+      &:hover {
+        background-color: #EAF0ED;
+      }
+      a {
+        text-align: center;
+        color: #3f5d45;
+        display: block;
+        padding: 16px 0;
       }
     }
   }
   &__desserts {
-    flex: 0 1 620px;
+    flex: 0 1 66%;
   }
 }
 
@@ -129,13 +152,11 @@ button {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  justify-content: space-between;
 }
 
 .dessert-card {
   margin-bottom: 20px;
-  &:nth-child(odd) {
-    margin-right: 20px;
-  }
 }
 .card-header {
   position: relative;
@@ -183,7 +204,11 @@ button {
   font-size: 24px;
   font-weight: 700;
   background-color: #eaf0ed;
-  cursor: pointer;
+  transition: all .3s;
+  &:hover {
+    color: #eaf0ed;
+    background-color: #3f5d45;
+  }
 }
 
 .page-btns {
@@ -193,17 +218,20 @@ button {
 }
 
 .page-btn {
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 1px solid #eaf0ed;
+  transition: all .3s;
   a {
     color: #3f5d45;
-    padding: 18px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  &--active {
+  &:hover {
+    background-color: #eaf0ed;
+  }
+  &.active {
     background-color: #3f5d45;
     a {
       color: #fff;

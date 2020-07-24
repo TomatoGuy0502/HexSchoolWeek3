@@ -80,6 +80,14 @@ button {
 .navbar__hamburger {
   display: none;
   padding: 10px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.navbar__hamburger:hover {
+  background: #EAF0ED;
 }
 
 .navbar__brand--mobile {
@@ -100,10 +108,24 @@ button {
 .navbar__links a {
   padding: 10px 30px;
   color: #3f5d45;
+  border-radius: 30px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.navbar__links a:hover {
+  background: #EAF0ED;
 }
 
 .navbar__cart {
   padding: 10px;
+  border-radius: 30px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.navbar__cart:hover {
+  background: #EAF0ED;
 }
 
 .container {
@@ -123,8 +145,8 @@ button {
 
 .store__menu {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+      -ms-flex: 1 0 33%;
+          flex: 1 0 33%;
   margin-right: 20px;
   font-weight: 700;
 }
@@ -137,21 +159,30 @@ button {
 }
 
 .store__menu li {
-  text-align: center;
-  padding: 16px 0;
-  color: #3f5d45;
   border: 1px solid #eaf0ed;
-  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .store__menu li.active {
   background-color: #EAF0ED;
 }
 
+.store__menu li:hover {
+  background-color: #EAF0ED;
+}
+
+.store__menu li a {
+  text-align: center;
+  color: #3f5d45;
+  display: block;
+  padding: 16px 0;
+}
+
 .store__desserts {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 620px;
-          flex: 0 1 620px;
+      -ms-flex: 0 1 66%;
+          flex: 0 1 66%;
 }
 
 .desserts-list {
@@ -161,14 +192,13 @@ button {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .dessert-card {
   margin-bottom: 20px;
-}
-
-.dessert-card:nth-child(odd) {
-  margin-right: 20px;
 }
 
 .card-header {
@@ -225,7 +255,13 @@ button {
   font-size: 24px;
   font-weight: 700;
   background-color: #eaf0ed;
-  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.card-footer:hover {
+  color: #eaf0ed;
+  background-color: #3f5d45;
 }
 
 .page-btns {
@@ -239,30 +275,35 @@ button {
 }
 
 .page-btn {
+  border: 1px solid #eaf0ed;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.page-btn a {
+  color: #3f5d45;
   width: 60px;
   height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid #eaf0ed;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.page-btn a {
-  color: #3f5d45;
-  padding: 18px;
+.page-btn:hover {
+  background-color: #eaf0ed;
 }
 
-.page-btn--active {
+.page-btn.active {
   background-color: #3f5d45;
 }
 
-.page-btn--active a {
+.page-btn.active a {
   color: #fff;
 }
 
