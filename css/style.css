@@ -512,6 +512,9 @@ button {
   .container {
     max-width: 375px;
   }
+  .navbar {
+    padding: 10px 0;
+  }
 }
 
 @media (max-width: 414px) {
