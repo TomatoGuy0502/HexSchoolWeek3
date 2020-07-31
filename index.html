@@ -6,6 +6,7 @@
   <title>Sweetaste</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&amp;display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
   <nav class="container navbar">
@@ -20,11 +21,11 @@
     <a href="#" class="navbar__cart"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/shopping_cart.png"></a>
   </nav>
   <main class="container">
-    <div class="banner">
+    <div class="banner" data-aos="zoom-in-down">
       <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/banner.png">
     </div>
     <div class="store">
-      <div class="store__menu">
+      <div class="store__menu" data-aos="fade-right">
         <h3>甜點類別</h3>
         <ul>
           <li class="active"><a href="#">所有甜點(48)</a></li>
@@ -33,7 +34,7 @@
           <li><a href="#">新品上市(12)</a></li>
         </ul>
       </div>
-      <div class="store__desserts">
+      <div class="store__desserts" data-aos="fade-left">
         <ul class="desserts-list">
   
           <li class="dessert-card">
@@ -130,7 +131,7 @@
       </li>
     </ul>
   </main>
-  <footer class="footer">
+  <footer class="footer" data-aos="fade-right">
     <form class="footer__form" action="">
       <div class="container footer__form-container">
         <label class="form-label" for="email">
@@ -169,5 +170,9 @@
       </div>
     </div>
   </footer>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
