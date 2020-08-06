@@ -1,0 +1,13 @@
+@mixin progress($color) {
+  display: grid;
+  grid-template-columns: auto 1fr auto 1fr auto;
+  align-items: center;
+  svg {
+    color: $color;
+  }
+  hr {
+    margin: 0;
+    border: 1px solid $color;
+    background-color: $color;
+  }
+}

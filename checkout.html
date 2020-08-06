@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sweetaste</title>
+  <title>Sweetaste | 確認結帳</title>
   <link rel="stylesheet" href="./css/checkout.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
   <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
@@ -11,33 +11,45 @@
 <body>
   <nav class="container navbar">
     <img class="navbar__hamburger" src="./images/dehaze-24px.png">
-    <a href="#" class="navbar__brand"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg" width="200"></a>
+    <a href="./index.html" class="navbar__brand"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg" width="200"></a>
     <a href="#" class="navbar__brand--mobile"><img src="./images/logotype-sm-dark.svg" width="120"></a>
     <ul class="navbar__links">
-      <li><a href="#">首頁</a></li>
+      <li><a href="./index.html">首頁</a></li>
       <li><a href="#">甜點</a></li>
       <li><a href="#">登入</a></li>
     </ul>
     <a href="#" class="navbar__cart"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/shopping_cart.png"></a>
   </nav>
   <main class="container">
-    <div class="check">
+    <form class="check" action="./checkout_success.html">
       <div class="receipt-form">
         <div class="receipt-form__head">
           <h3>發票</h3>
-          <div class="process">v-v-v</div>
-          <div class="electronic-receipt">電子發票</div>
-          <div class="send-receipt">郵寄發票</div>
+          <div class="progress">
+            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M10,17L5,12L6.41,10.58L10,14.17L17.59,6.58L19,8M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+            </svg>
+            <hr>
+            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M10,17L5,12L6.41,10.58L10,14.17L17.59,6.58L19,8M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+            </svg>
+            <hr>
+            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7Z" />
+            </svg>
+          </div>
+          <button class="electronic-receipt">電子發票</button>
+          <button class="send-receipt">郵寄發票</button>
         </div>
         <div class="receipt-form__body">
           <label for="email">電子郵件信箱</label>
           <input type="email" id="email" placeholder="example@email.com" required>
           <label for="taxid">統一編號（選填）</label>
-          <input type="text" id="taxid">
+          <input type="text" id="taxid" placeholder="12345678">
         </div>
       </div>
       <button class="check-submit">確認結帳</button>
-    </div>
+    </form>
     <div class="orders">
       <div class="orders__card orders__summary">
         <h3 class="orders__card__head">訂單摘要</h3>
@@ -86,13 +98,13 @@
   <footer class="footer" data-aos="fade-right">
     <form class="footer__form" action="">
       <div class="container footer__form-container">
-        <label class="form-label" for="email">
+        <label class="form-label" for="footerEmail">
         <img src="./images/logo-light.svg" alt="" width="40"/>
         <span>訂閱你我的甜蜜郵件</span>
         </label>
         <div class="form-input">
         <img class="email-icon" src="./images/mail-24px.png" alt="">
-        <input type="email" id="email">
+        <input type="email" id="footerEmail">
         <button type="submit"><img src="./images/arrow_forward-24px.png" alt=""></button>
         </div>
       </div>

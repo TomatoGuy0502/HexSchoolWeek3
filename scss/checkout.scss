@@ -29,16 +29,25 @@ main {
       font-size: 36px;
       font-weight: $font-weight-semibold;
     }
+    .progress {
+      @include progress($color-secondary);
+    }
     .electronic-receipt {
       background-color: $color-secondary;
       color: $color-primary;
       line-height: 56px;
       text-align: center;
+      font-weight: $font-weight-semibold;
+      font-size: $font-size-medium;
     }
     .send-receipt {
       line-height: 56px;
       text-align: center;
       border: 1px solid $color-secondary;
+      background-color: $color-primary;
+      color: $color-secondary;
+      font-weight: $font-weight-semibold;
+      font-size: $font-size-medium;
     }
   }
   &__body {
@@ -101,6 +110,7 @@ main {
 }
 .order-card {
   display: flex;
+  justify-content: space-between;
   &__img {
     height: 80px;
     width: 120px;

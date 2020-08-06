@@ -1,0 +1,39 @@
+@import './public/index';
+
+main {
+  padding-bottom: 60px;
+}
+
+.checkout-success {
+  position: relative;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/checkout_success.jpg');
+  background-size: cover;
+  background-position: center;
+  .progress {
+    width: 200px;
+    margin-bottom: 30px;
+    @include progress($color-primary);
+  }
+}
+
+
+
+.goto-shop {
+  display: grid;
+  place-items: center;
+  width: 300px;
+  height: 65px;
+  color: $color-primary;
+  background-color: $color-submit;
+  margin-top: 50px;
+  @include phone() {
+    width: 100%;
+    position: absolute;
+    bottom: -60px;
+  }
+}
