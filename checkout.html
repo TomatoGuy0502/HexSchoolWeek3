@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweetaste</title>
+  <link rel="stylesheet" href="./css/checkout.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+</head>
+<body>
+  <nav class="container navbar">
+    <img class="navbar__hamburger" src="./images/dehaze-24px.png">
+    <a href="#" class="navbar__brand"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg" width="200"></a>
+    <a href="#" class="navbar__brand--mobile"><img src="./images/logotype-sm-dark.svg" width="120"></a>
+    <ul class="navbar__links">
+      <li><a href="#">首頁</a></li>
+      <li><a href="#">甜點</a></li>
+      <li><a href="#">登入</a></li>
+    </ul>
+    <a href="#" class="navbar__cart"><img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/shopping_cart.png"></a>
+  </nav>
+  <main class="container">
+    <div class="check">
+      <div class="receipt-form">
+        <div class="receipt-form__head">
+          <h3>發票</h3>
+          <div class="process">v-v-v</div>
+          <div class="electronic-receipt">電子發票</div>
+          <div class="send-receipt">郵寄發票</div>
+        </div>
+        <div class="receipt-form__body">
+          <label for="email">電子郵件信箱</label>
+          <input type="email" id="email" placeholder="example@email.com" required>
+          <label for="taxid">統一編號（選填）</label>
+          <input type="text" id="taxid">
+        </div>
+      </div>
+      <button class="check-submit">確認結帳</button>
+    </div>
+    <div class="orders">
+      <div class="orders__card orders__summary">
+        <h3 class="orders__card__head">訂單摘要</h3>
+        <div class="orders__card__body">
+          <div class="subtotal">
+            <span>小計</span><span>NT$ 2,700</span>
+          </div>
+          <div class="shipping">
+            <span>運費</span><span>NT$ 300</span>
+          </div>
+          <div class="total">
+            <span>總計</span><span>NT$ 3,000</span>
+          </div>
+        </div>
+      </div>
+      <div class="orders__card orders__list">
+        <h3 class="orders__card__head">購物清單</h3>
+        <div class="orders__card__body">
+          <ul>
+            <li class="order-card">
+              <img class="order-card__img" src="./images/desserts/1.jpg" alt="">
+              <div class="order-card__info">
+                <span class="order-card__info__name">焦糖馬卡龍（2）</span>
+                <span class="order-card__info__price">NT$ 900</span>
+              </div>
+            </li>
+            <li class="order-card">
+              <img class="order-card__img" src="./images/desserts/2.jpg" alt="">
+              <div class="order-card__info">
+                <span class="order-card__info__name">焦糖馬卡龍（2）</span>
+                <span class="order-card__info__price">NT$ 900</span>
+              </div>
+            </li>
+            <li class="order-card">
+              <img class="order-card__img" src="./images/desserts/3.jpg" alt="">
+              <div class="order-card__info">
+                <span class="order-card__info__name">焦糖馬卡龍（2）</span>
+                <span class="order-card__info__price">NT$ 900</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer" data-aos="fade-right">
+    <form class="footer__form" action="">
+      <div class="container footer__form-container">
+        <label class="form-label" for="email">
+        <img src="./images/logo-light.svg" alt="" width="40"/>
+        <span>訂閱你我的甜蜜郵件</span>
+        </label>
+        <div class="form-input">
+        <img class="email-icon" src="./images/mail-24px.png" alt="">
+        <input type="email" id="email">
+        <button type="submit"><img src="./images/arrow_forward-24px.png" alt=""></button>
+        </div>
+      </div>
+    </form>
+    <div class="footer__info">
+      <div class="container footer__info-container">
+        <div class="info-top">
+          <div class="info-top__contact">
+            <a href="#"><img src="./images/logotype-lg-dark.svg" alt=""></a>
+            <ul>
+              <li>07-1234-5678</li>
+              <li>sweetaste@email.com</li>
+              <li>800 高雄市新興區幸福路 520 號</li>
+            </ul>
+          </div>
+          <p class="info-top__slogan">今天是個∣∣</br>　吃甜點的好日子</p>
+        </div>
+        <div class="info-bottom">
+          <ul class="info-bottom__icons">
+            <li><a href="#"><img src="./images/ic-line@.svg" alt="" height="32"></a></li>
+            <li><a href="#"><img src="./images/ic-facebook.svg" alt="" height="32"></a></li>
+          </ul>
+          <span class="info-bottom__copyright">
+          © 2018 Sweetaste* All Rights Reserved
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script> -->
+</body>
+</html>

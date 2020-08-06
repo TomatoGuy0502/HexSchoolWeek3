@@ -1,0 +1,165 @@
+@import './public/index';
+
+.banner {
+  margin-bottom: 60px;
+  @include pad() {
+    margin: 0;
+  }
+}
+
+.store {
+  display: flex;
+  &__menu {
+    flex: 1 0 33%;
+    margin-right: 20px;
+    font-weight: $font-weight-semibold;
+    h3 {
+      text-align: center;
+      background-color: $color-primary;
+      color: #fff;
+      padding: 16px 0;
+      font-size: $font-size-medium;
+    }
+    li {
+      border: 1px solid $color-secondary;
+      transition: all .3s;
+      &.active {
+        background-color: $color-secondary;
+      }
+      &:hover {
+        background-color: $color-secondary;
+      }
+      a {
+        text-align: center;
+        color: $color-primary;
+        display: block;
+        padding: 16px 0;
+        font-size: $font-size-medium;
+      }
+    }
+  }
+  &__desserts {
+    flex: 0 1 66%;
+  }
+  @include pad() {
+    flex-direction: column;
+    &__menu {
+      margin-right: 0;
+      margin-bottom: 20px;
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      li {
+        width: 25%;
+      }
+    }
+  }
+  @include phone() {
+    &__menu li {
+      width: 50%;
+    }
+  }
+}
+
+.desserts-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  @include pad() {
+    justify-content: space-around;
+  }
+}
+
+.dessert-card {
+  margin-bottom: 20px;
+  width: 300px;
+}
+.card-header {
+  position: relative;
+  &__spacial {
+    position: absolute;
+    left: 20px;
+    padding: 10px;
+    color: #fff;
+    background-color: $color-primary;
+    writing-mode: vertical-rl;
+    letter-spacing: 4px;
+  }
+  &__like {
+    position: absolute;
+    right: 10px;
+    padding: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+}
+
+.card-body {
+  display: flex;
+  font-size: $font-size-medium;
+  color: $color-primary;
+  &__name {
+    text-align: center;
+    padding: 14px 20px;
+    flex: 1;
+    border-left: 1px solid $color-secondary;
+    border-right: 1px solid $color-secondary;
+    font-weight: $font-weight-light;
+  }
+  &__price {
+    padding: 14px 20px;
+    border-right: 1px solid $color-secondary;
+    font-weight: $font-weight-semibold;
+    // 當name>=2行時，價格才會垂直對齊
+    display: flex;
+    align-items: center;
+  }
+}
+
+.card-footer {
+  width: 100%;
+  text-align: center;
+  padding: 16px 0;
+  color: $color-primary;
+  font-size: $font-size-large;
+  font-weight: $font-weight-semibold;
+  background-color: $color-secondary;
+  transition: all .3s;
+  &:hover {
+    color: $color-secondary;
+    background-color: $color-primary;
+  }
+}
+
+.page-btns {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+  @include pad() {
+    justify-content: center;
+  }
+}
+
+.page-btn {
+  border: 1px solid $color-secondary;
+  transition: all .3s;
+  a {
+    color: $color-primary;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &:hover {
+    background-color: $color-secondary;
+  }
+  &.active {
+    background-color: $color-primary;
+    a {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+@import './public/index';
+
+main {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 0 20px;
+  padding: 20px 0;
+  @include phone() {
+    grid-template-columns: 1fr;
+  }
+}
+
+.check {
+  @include phone() {
+    margin-bottom: 30px;
+  }
+}
+
+.receipt-form {
+  padding: 30px 40px;
+  background-color: $color-primary;
+  color: $color-secondary;
+  &__head {
+    display: grid;
+    grid-template: auto 56px / repeat(2, 1fr);
+    gap: 30px 0;
+    margin-bottom: 30px;
+    h3 {
+      font-size: 36px;
+      font-weight: $font-weight-semibold;
+    }
+    .electronic-receipt {
+      background-color: $color-secondary;
+      color: $color-primary;
+      line-height: 56px;
+      text-align: center;
+    }
+    .send-receipt {
+      line-height: 56px;
+      text-align: center;
+      border: 1px solid $color-secondary;
+    }
+  }
+  &__body {
+    label {
+      margin: 16px 0 8px;
+      display: block;
+    }
+    input {
+      width: 100%;
+      height: 56px;
+      padding: 20px;
+    }
+  }
+}
+
+.check-submit {
+  width: 100%;
+  height: 65px;
+  background-color: $color-submit;
+  color: $color-primary;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-large;
+}
+
+.orders__card {
+  width: 100%;
+  color: $color-gray;
+  &__head {
+    background-color: $color-secondary;
+    line-height: 65px;
+    text-align: center;
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-large;
+  }
+  &__body{
+    padding: 16px 20px;
+    border: 1px solid $color-secondary;
+  }
+  &:first-child {
+    margin-bottom: 20px;
+  }
+}
+.orders__summary {
+  .subtotal, .shipping, .total {
+    display: flex;
+    justify-content: space-between;
+  }
+  .subtotal {
+    margin-bottom: 8px;
+    font-weight: $font-weight-light;
+  }
+  .shipping {
+    margin-bottom: 16px;
+    font-weight: $font-weight-light;
+  }
+  .total {
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-medium;
+  }
+}
+.order-card {
+  display: flex;
+  &__img {
+    height: 80px;
+    width: 120px;
+    object-fit: cover;
+  }
+  &__info {
+    padding: 16px 0 16px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__name {
+      font-weight: $font-weight-light;
+      margin-bottom: 2px;
+    }
+    &__price {
+      font-weight: $font-weight-semibold;
+      font-size: $font-size-medium;
+    }
+  }
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  @include pad() {
+    flex-direction: column;
+    align-items: center;
+    &__info {
+      padding: 16px 0;
+      text-align: center;
+    }
+  }
+  @include phone() {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
